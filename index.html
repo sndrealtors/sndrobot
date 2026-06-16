@@ -193,6 +193,17 @@
   .frame:hover{transform:perspective(900px) rotateY(-4deg) rotateX(2deg)}
   .frame img{width:100%}
   .glowtag{display:inline-block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+  .pipe{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px}
+  .chip{font-size:.85rem;font-weight:600;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:rgba(34,231,255,.06);color:var(--ink);white-space:nowrap}
+  .chip:first-child{background:rgba(255,61,240,.12);border-color:rgba(255,61,240,.4)}
+  .chip:last-child{background:linear-gradient(90deg,var(--cyan),var(--violet));color:#04121a;border:none}
+  .arrow{color:var(--violet);font-weight:700}
+  @media(max-width:520px){.arrow{display:none}}
+  .reels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;align-items:start}
+  @media(max-width:900px){.reels{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}}
+  .reel{background:rgba(10,13,28,.5);border:1px solid var(--line);border-radius:18px;padding:12px;overflow:hidden}
+  .reel .instagram-media{margin:0 auto !important;min-width:unset !important;width:100% !important}
+  .reel-cap{color:var(--cyan);font-family:'Space Grotesk';font-weight:600;font-size:.95rem;margin-top:4px;text-align:center}
 
   /* how it works flow */
   .flow{position:relative;margin-top:40px}
@@ -340,6 +351,52 @@
   </div>
 </section>
 
+<!-- CONTENT ENGINE -->
+<section class="wrap">
+  <div class="showcase">
+    <div class="reveal">
+      <span class="glowtag">Content on autopilot</span>
+      <h2>Drag. Drop. Done.</h2>
+      <p class="section-lede">Snap a photo on your phone. Drag it in. The robot turns it into polished marketing shots AND a cinematic, scripted video, voiceover and captions baked in. Ready to launch. No CapCut, no editing, no late nights. Literally idiot-proof.</p>
+      <div class="pipe" aria-label="Drag and drop pipeline">
+        <span class="chip">📸 Phone photo</span><span class="arrow">→</span>
+        <span class="chip">✨ Pro photos</span><span class="arrow">→</span>
+        <span class="chip">🎬 Cinematic video</span><span class="arrow">→</span>
+        <span class="chip">🎙️ Voiceover</span><span class="arrow">→</span>
+        <span class="chip">💬 Captions</span><span class="arrow">→</span>
+        <span class="chip">🚀 Launch</span>
+      </div>
+    </div>
+    <div class="frame reveal">
+      <img src="assets/create.png" alt="SND Robot turning a phone photo into professional marketing photos and a cinematic captioned video with voiceover" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- SEE IT IN ACTION (Instagram reels) -->
+<section class="wrap" id="proof-reels">
+  <div class="reveal">
+    <span class="eyebrow">See it in action</span>
+    <h2>Don't take my word. Watch.</h2>
+    <p class="section-lede">Real reels from my team. The robot did the heavy lifting, the agent just dragged and dropped.</p>
+  </div>
+  <div class="reels">
+    <div class="reel reveal">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZbX0tFuKG5/" data-instgrm-version="14"></blockquote>
+      <p class="reel-cap">Denise — Drag &amp; Drop, live</p>
+    </div>
+    <div class="reel reveal">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZlwfYFuuhC/" data-instgrm-version="14"></blockquote>
+      <p class="reel-cap">Becky — your AI social media manager</p>
+    </div>
+    <div class="reel reveal">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZT97Cwu678/" data-instgrm-version="14"></blockquote>
+      <p class="reel-cap">200+ leads. $0 spend. From ONE Denise-made video.</p>
+    </div>
+  </div>
+</section>
+<script async src="//www.instagram.com/embed.js"></script>
+
 <!-- WHY JOIN -->
 <section class="wrap">
   <div class="reveal">
@@ -363,10 +420,10 @@
     <p class="section-lede">Started with no warm leads and limited capital. Door-knocked, farmed flyers on a hoverboard at night, built SND from scratch. The AI sits on top of real hustle, not in place of it.</p>
   </div>
   <div class="proof">
-    <div class="stat reveal"><div class="big" data-count="250" data-prefix="~$" data-suffix="k">~$250k</div><div class="lbl">first-year sales, from zero network</div></div>
-    <div class="stat reveal"><div class="big" data-count="10" data-suffix="+ yrs">10+ yrs</div><div class="lbl">in Singapore real estate</div></div>
-    <div class="stat reveal"><div class="big">Rising</div><div class="lbl">Millionaire agents produced, repeatedly</div></div>
-    <div class="stat reveal"><div class="big">HGTV</div><div class="lbl">House Hunters Asia S2 + AsiaOne feature</div></div>
+    <div class="stat reveal"><div class="big" data-count="500" data-prefix=">$" data-suffix="K">&gt;$500K</div><div class="lbl">what a NEW agent can clock in year ONE, with the robot behind them</div></div>
+    <div class="stat reveal"><div class="big" data-count="60" data-suffix="+">60+</div><div class="lbl">agents building under SND, and growing fast</div></div>
+    <div class="stat reveal"><div class="big">On HGTV</div><div class="lbl">House Hunters Asia S2 — plus featured on AsiaOne Money Talks</div></div>
+    <div class="stat reveal"><div class="big">PropNex</div><div class="lbl">Tech Committee member, shaping the agency's AI edge</div></div>
   </div>
 </section>
 
@@ -396,9 +453,7 @@
 </section>
 
 <footer class="wrap">
-  <div>Sophia Ng District (SND) @ PropNex · Singapore · CEA Reg No: R057106J</div>
-  <div style="margin-top:8px">WhatsApp <a href="https://wa.me/6588237000" target="_blank" rel="noopener">+65 8823 7000</a> · Instagram <a href="https://www.instagram.com/sophia.realtor" target="_blank" rel="noopener">@sophia.realtor</a></div>
-  <div class="signoff">SND Robot 24/7 made this possible! Heng ong huat with SND!! 🧧</div>
+  <div>WhatsApp <a href="https://wa.me/6588237000" target="_blank" rel="noopener">+65 8823 7000</a> · Instagram <a href="https://www.instagram.com/sophia.realtor" target="_blank" rel="noopener">@sophia.realtor</a></div>
 </footer>
 
 <a class="fab" href="https://wa.me/6588237000?text=Hi%20Sophia%2C%20I%20want%20to%20join%20SND" target="_blank" rel="noopener" aria-label="WhatsApp Sophia">
